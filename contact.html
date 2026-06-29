@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puneet Tyagi | Contact</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        theme: {
+                            black: '#0b0b0f',
+                            dark: '#13131a',
+                            beige: '#ffffff',
+                            blue: '#60a5fa',
+                            purple: '#a78bfa',
+                            zinc: '#b4b4b8'
+                        }
+                    },
+                    animation: {
+                        'gradient-x': 'gradient-x 3s ease infinite',
+                        'float': 'float 15s infinite alternate ease-in-out',
+                    },
+                    keyframes: {
+                        'gradient-x': {
+                            '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+                            '50%': { 'background-size': '200% 200%', 'background-position': 'right center' },
+                        },
+                        'float': {
+                            '0%': { transform: 'translate(0, 0) scale(1)' },
+                            '100%': { transform: 'translate(30px, 50px) scale(1.05)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #0b0b0f;
+            color: #b4b4b8;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, .font-display {
+            font-family: 'Outfit', sans-serif;
+            color: #ffffff;
+        }
+
+        /* Glassmorphism */
+        .glass-panel {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-panel:hover {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+            border: 1px solid rgba(167, 139, 250, 0.4);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 15px 40px rgba(96, 165, 250, 0.15);
+        }
+
+        /* Premium Input Fields */
+        .premium-input {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .premium-input:focus {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: #a78bfa;
+            box-shadow: 0 0 20px rgba(167, 139, 250, 0.15);
+            outline: none;
+        }
+        .premium-input::placeholder {
+            color: rgba(180, 180, 184, 0.5);
+        }
+
+        /* Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Staggered children */
+        .reveal-stagger > * {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active.reveal-stagger > *:nth-child(1) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+        .reveal.active.reveal-stagger > *:nth-child(2) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+        .reveal.active.reveal-stagger > *:nth-child(3) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+
+        .text-gradient-animated {
+            background: linear-gradient(to right, #60a5fa, #a78bfa, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+        }
+        
+        .mobile-menu-open { overflow: hidden; }
+    </style>
+</head>
+<body class="antialiased selection:bg-theme-purple/40 selection:text-white relative min-h-screen flex flex-col">
+
+    <div class="fixed top-[10%] right-[-100px] w-[500px] h-[500px] bg-theme-purple rounded-full blur-[120px] opacity-20 animate-float pointer-events-none z-[-1]"></div>
+    <div class="fixed bottom-[-100px] left-[-150px] w-[450px] h-[450px] bg-theme-blue rounded-full blur-[120px] opacity-20 animate-float pointer-events-none z-[-1]" style="animation-delay: -5s;"></div>
+
+    <nav class="fixed w-full z-50 top-0 transition-all duration-500 border-b border-transparent" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-5 md:py-6 flex justify-between items-center transition-all duration-300" id="nav-container">
+            <a href="index.html" class="text-2xl font-display font-bold tracking-tight text-theme-beige flex items-center gap-2 z-50 relative group">
+                P.T<span class="text-theme-blue group-hover:text-theme-purple transition-colors duration-300">.</span>
+            </a>
+            
+             <div class="hidden md:flex gap-10 lg:gap-12 text-sm font-medium tracking-wide text-theme-zinc">
+                <a href="index.html#about" class="hover:text-theme-beige transition-colors relative group">
+                    About
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-theme-purple transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="index.html#process" class="hover:text-theme-beige transition-colors relative group">
+                    Process
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-theme-purple transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="index.html" class="hover:text-theme-beige transition-colors relative group">
+                    Expertise
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-theme-purple transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="index.html#work" class="hover:text-theme-beige transition-colors relative group">
+                    Work
+                    <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-theme-purple transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="contact.html" class="text-theme-beige transition-colors relative group font-bold">
+                    Contact
+                    <span class="absolute -bottom-2 left-0 w-full h-0.5 bg-theme-purple transition-all duration-300"></span>
+                </a>
+            </div>
+
+            <a href="index.html#cv" class="hidden md:inline-flex items-center gap-2 px-7 py-2.5 glass-panel rounded-full text-sm font-medium text-theme-beige hover:text-white hover:border-theme-purple/60 transition-all group overflow-hidden relative">
+                <span class="relative z-10 flex items-center gap-2">Download CV <i class="ph ph-arrow-down-right transition-transform group-hover:translate-x-1 group-hover:translate-y-1"></i></span>
+            </a>
+
+            <button class="md:hidden text-2xl text-theme-beige z-50 relative p-2" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="ph ph-list" id="menu-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-[#0b0b0f]/95 backdrop-blur-2xl z-40 transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col justify-center items-center">
+        <div class="flex flex-col items-center gap-8 text-2xl font-display font-semibold w-full px-6">
+            <a href="index.html" class="mobile-link text-theme-zinc hover:text-white transition-colors">Home</a>
+            <a href="index.html#about" class="mobile-link text-theme-zinc hover:text-white transition-colors">About</a>
+            <a href="index.html#work" class="mobile-link text-theme-zinc hover:text-white transition-colors">Work</a>
+            <a href="#" class="mobile-link text-white transition-colors">Contact</a>
+            <div class="w-16 h-[1px] bg-white/10 my-4"></div>
+            <a href="index.html#cv" class="mobile-link glass-panel px-8 py-4 rounded-full text-lg flex items-center gap-3 w-full max-w-xs justify-center">
+                Download CV <i class="ph ph-download-simple"></i>
+            </a>
+        </div>
+    </div>
+
+    <main class="flex-grow pt-32 pb-20 px-6 flex items-center relative z-10">
+        <div class="max-w-7xl mx-auto w-full">
+            
+            <div class="text-center mb-16 md:mb-24 reveal active">
+                <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-theme-purple/30 bg-theme-purple/5 text-xs tracking-[0.2em] uppercase backdrop-blur-sm shadow-[0_0_20px_rgba(167,139,250,0.1)] mb-8">
+                    <span class="w-2 h-2 rounded-full bg-theme-purple animate-pulse shadow-[0_0_10px_rgba(167,139,250,0.8)]"></span>
+                    <span class="text-theme-purple font-semibold">Let's talk</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl lg:text-[5rem] font-bold font-display tracking-tighter leading-tight mb-6">
+                    Start a <span class="text-gradient-animated animate-gradient-x">Project.</span>
+                </h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto text-theme-zinc font-normal leading-relaxed">
+                    Have a vision in mind? I'm currently available for freelance projects and full-time opportunities. Drop a message below and let's build something amazing.
+                </p>
+            </div>
+
+            <!-- contact info section -->
+            <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 reveal active reveal-stagger">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="glass-panel p-8 md:p-10 rounded-[2rem] h-full flex flex-col justify-between group">
+                        <div class="space-y-10">
+                            <div>
+                                <h3 class="text-3xl font-bold font-display text-theme-beige mb-2">Contact Info</h3>
+                                <p class="text-theme-zinc">Reach out directly via email or social media.</p>
+                            </div>
+
+                            <div class="space-y-8">
+                                <!-- Mobile Option -->
+                                <a href="tel:+918882888249" class="flex items-center gap-6 group/link">
+                                    <div class="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover/link:bg-theme-blue/10 group-hover/link:border-theme-blue/30 transition-all">
+                                        <i class="ph ph-phone text-2xl text-theme-beige group-hover/link:text-theme-blue transition-colors"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-theme-zinc uppercase tracking-widest mb-1">Mobile</p>
+                                        <p class="text-lg font-semibold text-theme-beige group-hover/link:text-theme-blue transition-colors">+91 8882888249</p>
+                                    </div>
+                                </a>
+
+                                <!-- Email Option -->
+                                <a href="mailto:puneettyagi1997@gmail.com" class="flex items-center gap-6 group/link">
+                                    <div class="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover/link:bg-theme-purple/10 group-hover/link:border-theme-purple/30 transition-all">
+                                        <i class="ph ph-envelope-simple text-2xl text-theme-beige group-hover/link:text-theme-purple transition-colors"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-theme-zinc uppercase tracking-widest mb-1">Email</p>
+                                        <p class="text-lg font-semibold text-theme-beige group-hover/link:text-theme-purple transition-colors">puneettyagi1997@gmail.com</p>
+                                    </div>
+                                </a>
+
+                                <!-- Location Option -->
+                                <div class="flex items-center gap-6 group/link">
+                                    <div class="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover/link:bg-theme-purple/10 group-hover/link:border-theme-purple/30 transition-all">
+                                        <i class="ph ph-map-pin text-2xl text-theme-beige group-hover/link:text-theme-purple transition-colors"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-theme-zinc uppercase tracking-widest mb-1">Location</p>
+                                        <p class="text-lg font-semibold text-theme-beige group-hover/link:text-theme-purple transition-colors">New Delhi, INDIA (Remote)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-12 mt-12 border-t border-white/10">
+                            <p class="text-sm text-theme-zinc uppercase tracking-widest mb-6">Social Profiles</p>
+                            <div class="flex gap-4">
+                                <a href="https://www.linkedin.com/in/puneettyagi07/" target="_blank" class="w-12 h-12 rounded-full glass-panel flex items-center justify-center hover:bg-theme-blue/20 hover:border-theme-blue/50 transition-all hover:-translate-y-1">
+                                    <i class="ph-fill ph-linkedin-logo text-xl text-theme-beige hover:text-white"></i>
+                                </a>
+                                <a href="https://github.com/puneettyagi07" target="_blank" class="w-12 h-12 rounded-full glass-panel flex items-center justify-center hover:bg-white/20 hover:border-white/50 transition-all hover:-translate-y-1">
+                                    <i class="ph-fill ph-github-logo text-xl text-theme-beige hover:text-white"></i>
+                                </a>
+                                <a href="https://x.com/Puneettyagi07" target="_blank" class="w-12 h-12 rounded-full glass-panel flex items-center justify-center hover:bg-theme-purple/20 hover:border-theme-purple/50 transition-all hover:-translate-y-1">
+                                    <i class="ph-fill ph-twitter-logo text-xl text-theme-beige hover:text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message Section -->
+                <div class="lg:col-span-7">
+                    <!-- FIXED DETECTED WARNING: Removed overlapping md:p-10 rule -->
+                    <form class="glass-panel p-8 md:p-12 rounded-[2rem] space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="name" class="text-sm font-medium text-theme-beige px-1">Your Name</label>
+                                <input type="text" id="name" placeholder="John Doe" class="w-full px-5 py-4 rounded-xl premium-input focus:ring-0">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="email" class="text-sm font-medium text-theme-beige px-1">Email Address</label>
+                                <input type="email" id="email" placeholder="john@example.com" class="w-full px-5 py-4 rounded-xl premium-input focus:ring-0">
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <label for="subject" class="text-sm font-medium text-theme-beige px-1">Subject</label>
+                            <input type="text" id="subject" placeholder="What is this regarding?" class="w-full px-5 py-4 rounded-xl premium-input focus:ring-0">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="message" class="text-sm font-medium text-theme-beige px-1">Message</label>
+                            <textarea id="message" rows="5" placeholder="Tell me about your project..." class="w-full px-5 py-4 rounded-xl premium-input focus:ring-0 resize-none"></textarea>
+                        </div>
+
+                        <div class="pt-4">
+                            <button type="button" class="group w-full md:w-auto px-10 py-5 bg-theme-beige text-theme-black rounded-xl font-bold hover:bg-gray-200 transition-all duration-300 flex items-center justify-center gap-3 text-lg hover:shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+                                Send Message <i class="ph-bold ph-paper-plane-right transform group-hover:translate-x-2 group-hover:-translate-y-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-10 px-6 border-t border-white/10 text-sm text-theme-zinc font-normal relative z-10 bg-theme-black mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+            <p>&copy; 2026 <span class="text-theme-purple font-bold">Puneet Tyagi.</span> All rights reserved.</p>
+            <p>Designed & Built with <span class="text-theme-purple font-bold">Precision</span>.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+            
+            const navbar = document.getElementById('navbar');
+            const navContainer = document.getElementById('nav-container');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('bg-[#0b0b0f]/90', 'backdrop-blur-xl', 'border-white/10');
+                    navbar.classList.remove('border-transparent');
+                    navContainer.classList.add('py-3', 'md:py-4');
+                    navContainer.classList.remove('py-5', 'md:py-6');
+                } else {
+                    navbar.classList.remove('bg-[#0b0b0f]/90', 'backdrop-blur-xl', 'border-white/10');
+                    navbar.classList.add('border-transparent');
+                    navContainer.classList.remove('py-3', 'md:py-4');
+                    navContainer.classList.add('py-5', 'md:py-6');
+                }
+            });
+
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            let isMenuOpen = false;
+
+            function toggleMenu() {
+                isMenuOpen = !isMenuOpen;
+                if (isMenuOpen) {
+                    mobileMenu.classList.remove('translate-x-full');
+                    menuIcon.classList.remove('ph-list');
+                    menuIcon.classList.add('ph-x');
+                    document.body.classList.add('mobile-menu-open');
+                } else {
+                    mobileMenu.classList.add('translate-x-full');
+                    menuIcon.classList.remove('ph-x');
+                    menuIcon.classList.add('ph-list');
+                    document.body.classList.remove('mobile-menu-open');
+                }
+            }
+
+            menuBtn.addEventListener('click', toggleMenu);
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (isMenuOpen) toggleMenu();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
