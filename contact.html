@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puneet Tyagi | Contact</title>
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Outfit:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="contact.css">
-    
+
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <script>
@@ -53,16 +53,19 @@
 </head>
 <body class="antialiased selection:bg-theme-purple/40 selection:text-white relative min-h-screen flex flex-col">
 
-    <div class="fixed top-[10%] right-[-100px] w-[500px] h-[500px] bg-theme-purple rounded-full blur-[120px] opacity-20 animate-float pointer-events-none z-[-1]"></div>
-    <div class="fixed bottom-[-100px] left-[-150px] w-[450px] h-[450px] bg-theme-blue rounded-full blur-[120px] opacity-20 animate-float pointer-events-none z-[-1]" style="animation-delay: -5s;"></div>
+    <!-- Ambient Glows safely clipped inside a fixed viewport container -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
+        <div class="absolute top-[10%] right-[-100px] w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-theme-purple rounded-full blur-[100px] md:blur-[120px] opacity-20 animate-float"></div>
+        <div class="absolute bottom-[-100px] left-[-150px] w-[280px] h-[280px] md:w-[450px] md:h-[450px] bg-theme-blue rounded-full blur-[100px] md:blur-[120px] opacity-20 animate-float" style="animation-delay: -5s;"></div>
+    </div>
 
     <nav class="fixed w-full z-50 top-0 transition-all duration-500 border-b border-transparent" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 md:px-8 py-5 md:py-6 flex justify-between items-center transition-all duration-300" id="nav-container">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-5 md:py-6 flex justify-between items-center transition-all duration-300" id="nav-container">
             <a href="index.html" class="text-2xl font-display font-bold tracking-tight text-theme-beige flex items-center gap-2 z-50 relative group">
                 P.T<span class="text-theme-blue group-hover:text-theme-purple transition-colors duration-300">.</span>
             </a>
-            
-            <div class="hidden md:flex gap-10 lg:gap-12 text-sm font-medium tracking-wide text-theme-zinc">
+
+            <div class="hidden md:flex gap-8 lg:gap-12 text-sm font-medium tracking-wide text-theme-zinc">
                 <a href="index.html#about" class="hover:text-theme-beige transition-colors relative group">
                     About
                     <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-theme-purple transition-all duration-300 group-hover:w-full"></span>
@@ -89,7 +92,7 @@
                 </a>
             </div>
 
-            <a href="index.html#cv" class="hidden md:inline-flex items-center gap-2 px-7 py-2.5 glass-panel rounded-full text-sm font-medium text-theme-beige hover:text-white hover:border-theme-purple/60 transition-all group overflow-hidden relative">
+            <a href="pdf/FSD_Resume_Puneet_Tyagi.pdf" download class="hidden md:inline-flex items-center gap-2 px-7 py-2.5 glass-panel rounded-full text-sm font-medium text-theme-beige hover:text-white hover:border-theme-purple/60 transition-all group overflow-hidden relative">
                 <span class="relative z-10 flex items-center gap-2">Download CV <i class="ph ph-arrow-down-right transition-transform group-hover:translate-x-1 group-hover:translate-y-1"></i></span>
             </a>
 
@@ -100,83 +103,85 @@
     </nav>
 
     <div id="mobile-menu" class="fixed inset-0 bg-[#0b0b0f]/95 backdrop-blur-2xl z-40 transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col justify-center items-center">
-        <div class="flex flex-col items-center gap-8 text-2xl font-display font-semibold w-full px-6">
+        <div class="flex flex-col items-center gap-7 text-2xl font-display font-semibold w-full px-6">
             <a href="index.html" class="mobile-link text-theme-zinc hover:text-white transition-colors">Home</a>
             <a href="index.html#about" class="mobile-link text-theme-zinc hover:text-white transition-colors">About</a>
+            <a href="index.html#expertise" class="mobile-link text-theme-zinc hover:text-white transition-colors">Expertise</a>
+            <a href="index.html#experience" class="mobile-link text-theme-zinc hover:text-white transition-colors">Experience</a>
             <a href="index.html#work" class="mobile-link text-theme-zinc hover:text-white transition-colors">Work</a>
             <a href="#" class="mobile-link text-white transition-colors">Contact</a>
-            <div class="w-16 h-[1px] bg-white/10 my-4"></div>
-            <a href="index.html#cv" class="mobile-link glass-panel px-8 py-4 rounded-full text-lg flex items-center gap-3 w-full max-w-xs justify-center">
+            <div class="w-16 h-[1px] bg-white/10 my-2"></div>
+            <a href="pdf/FSD_Resume_Puneet_Tyagi.pdf" download class="mobile-link glass-panel px-8 py-4 rounded-full text-lg flex items-center gap-3 w-full max-w-xs justify-center">
                 Download CV <i class="ph ph-download-simple"></i>
             </a>
         </div>
     </div>
 
-    <main class="flex-grow pt-32 pb-20 px-6 flex items-center relative z-10">
+    <main class="flex-grow pt-28 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 flex items-center relative z-10">
         <div class="max-w-7xl mx-auto w-full">
-            
-            <div class="text-center mb-16 md:mb-24 reveal active">
-                <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-theme-purple/30 bg-theme-purple/5 text-xs tracking-[0.2em] uppercase backdrop-blur-sm shadow-[0_0_20px_rgba(167,139,250,0.1)] mb-8">
+
+            <div class="text-center mb-12 md:mb-20 reveal active">
+                <div class="inline-flex items-center gap-3 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-theme-purple/30 bg-theme-purple/5 text-xs tracking-[0.2em] uppercase backdrop-blur-sm shadow-[0_0_20px_rgba(167,139,250,0.1)] mb-6 sm:mb-8">
                     <span class="w-2 h-2 rounded-full bg-theme-purple animate-pulse shadow-[0_0_10px_rgba(167,139,250,0.8)]"></span>
                     <span class="text-theme-purple font-semibold">Let's talk</span>
                 </div>
-                <h1 class="text-5xl md:text-7xl lg:text-[5rem] font-bold font-display tracking-tighter leading-tight mb-6">
+                <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-[5rem] font-bold font-display tracking-tighter leading-tight mb-5">
                     Start a <span class="text-gradient-animated animate-gradient-x">Project.</span>
                 </h1>
-                <p class="text-lg md:text-xl max-w-2xl mx-auto text-theme-zinc font-normal leading-relaxed">
+                <p class="text-base sm:text-lg md:text-xl max-w-2xl mx-auto text-theme-zinc font-normal leading-relaxed">
                     Have a vision in mind? I'm currently available for freelance projects and full-time opportunities. Drop a message below and let's build something amazing.
                 </p>
             </div>
 
-            <!-- contact info section -->
-            <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 reveal active reveal-stagger">
-                
+            <!-- Contact Info & Message Grid -->
+            <div class="grid lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 reveal active reveal-stagger">
+
                 <div class="lg:col-span-5 space-y-6">
-                    <div class="glass-panel p-8 md:p-10 rounded-[2rem] h-full flex flex-col justify-between group">
-                        <div class="space-y-10">
+                    <div class="glass-panel p-6 sm:p-8 md:p-10 rounded-[1.75rem] md:rounded-[2rem] h-full flex flex-col justify-between group">
+                        <div class="space-y-8 sm:space-y-10">
                             <div>
-                                <h3 class="text-3xl font-bold font-display text-theme-beige mb-2">Contact Info</h3>
-                                <p class="text-theme-zinc">Reach out directly via email or social media.</p>
+                                <h3 class="text-2xl sm:text-3xl font-bold font-display text-theme-beige mb-2">Contact Info</h3>
+                                <p class="text-theme-zinc text-sm sm:text-base">Reach out directly via email or social media.</p>
                             </div>
 
-                            <div class="space-y-8">
+                            <div class="space-y-6 sm:space-y-8">
                                 <!-- Mobile Option -->
-                                <a href="tel:+918882888249" class="flex items-center gap-6 group/link">
-                                    <div class="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover/link:bg-theme-blue/10 group-hover/link:border-theme-blue/30 transition-all">
-                                        <i class="ph ph-phone text-2xl text-theme-beige group-hover/link:text-theme-blue transition-colors"></i>
+                                <a href="tel:+918882888249" class="flex items-center gap-4 sm:gap-6 group/link">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover/link:bg-theme-blue/10 group-hover/link:border-theme-blue/30 transition-all">
+                                        <i class="ph ph-phone text-xl sm:text-2xl text-theme-beige group-hover/link:text-theme-blue transition-colors"></i>
                                     </div>
-                                    <div>
-                                        <p class="text-sm text-theme-zinc uppercase tracking-widest mb-1">Mobile</p>
-                                        <p class="text-lg font-semibold text-theme-beige group-hover/link:text-theme-blue transition-colors">+91 8882888249</p>
+                                    <div class="min-w-0">
+                                        <p class="text-xs sm:text-sm text-theme-zinc uppercase tracking-widest mb-1">Mobile</p>
+                                        <p class="text-base sm:text-lg font-semibold text-theme-beige group-hover/link:text-theme-blue transition-colors">+91 8882888249</p>
                                     </div>
                                 </a>
 
                                 <!-- Email Option -->
-                                <a href="mailto:puneettyagi1997@gmail.com" class="flex items-center gap-6 group/link">
-                                    <div class="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover/link:bg-theme-purple/10 group-hover/link:border-theme-purple/30 transition-all">
-                                        <i class="ph ph-envelope-simple text-2xl text-theme-beige group-hover/link:text-theme-purple transition-colors"></i>
+                                <a href="mailto:puneettyagi1997@gmail.com" class="flex items-center gap-4 sm:gap-6 group/link">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover/link:bg-theme-purple/10 group-hover/link:border-theme-purple/30 transition-all">
+                                        <i class="ph ph-envelope-simple text-xl sm:text-2xl text-theme-beige group-hover/link:text-theme-purple transition-colors"></i>
                                     </div>
-                                    <div>
-                                        <p class="text-sm text-theme-zinc uppercase tracking-widest mb-1">Email</p>
-                                        <p class="text-lg font-semibold text-theme-beige group-hover/link:text-theme-purple transition-colors">puneettyagi1997@gmail.com</p>
+                                    <div class="min-w-0">
+                                        <p class="text-xs sm:text-sm text-theme-zinc uppercase tracking-widest mb-1">Email</p>
+                                        <p class="text-base sm:text-lg font-semibold text-theme-beige group-hover/link:text-theme-purple transition-colors break-all">puneettyagi1997@gmail.com</p>
                                     </div>
                                 </a>
 
                                 <!-- Location Option -->
-                                <div class="flex items-center gap-6 group/link">
-                                    <div class="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover/link:bg-theme-purple/10 group-hover/link:border-theme-purple/30 transition-all">
-                                        <i class="ph ph-map-pin text-2xl text-theme-beige group-hover/link:text-theme-purple transition-colors"></i>
+                                <div class="flex items-center gap-4 sm:gap-6 group/link">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover/link:bg-theme-purple/10 group-hover/link:border-theme-purple/30 transition-all">
+                                        <i class="ph ph-map-pin text-xl sm:text-2xl text-theme-beige group-hover/link:text-theme-purple transition-colors"></i>
                                     </div>
-                                    <div>
-                                        <p class="text-sm text-theme-zinc uppercase tracking-widest mb-1">Location</p>
-                                        <p class="text-lg font-semibold text-theme-beige group-hover/link:text-theme-purple transition-colors">New Delhi, INDIA (Remote)</p>
+                                    <div class="min-w-0">
+                                        <p class="text-xs sm:text-sm text-theme-zinc uppercase tracking-widest mb-1">Location</p>
+                                        <p class="text-base sm:text-lg font-semibold text-theme-beige group-hover/link:text-theme-purple transition-colors">New Delhi, INDIA (Remote)</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="pt-12 mt-12 border-t border-white/10">
-                            <p class="text-sm text-theme-zinc uppercase tracking-widest mb-6">Social Profiles</p>
+                        <div class="pt-8 sm:pt-12 mt-8 sm:mt-12 border-t border-white/10">
+                            <p class="text-xs sm:text-sm text-theme-zinc uppercase tracking-widest mb-5">Social Profiles</p>
                             <div class="flex gap-4">
                                 <a href="https://www.linkedin.com/in/puneettyagi07/" target="_blank" class="w-12 h-12 rounded-full glass-panel flex items-center justify-center hover:bg-theme-blue/20 hover:border-theme-blue/50 transition-all hover:-translate-y-1">
                                     <i class="ph-fill ph-linkedin-logo text-xl text-theme-beige hover:text-white"></i>
@@ -194,35 +199,34 @@
 
                 <!-- Message Section -->
                 <div class="lg:col-span-7">
-                    <form id="contact-form" class="glass-panel p-8 md:p-12 rounded-[2rem] space-y-6">
-                        <!-- Replace value with your Web3Forms Access Key -->
+                    <form id="contact-form" class="glass-panel p-6 sm:p-8 md:p-12 rounded-[1.75rem] md:rounded-[2rem] space-y-5 sm:space-y-6">
                         <input type="hidden" name="access_key" value="a940610e-4121-44fd-917f-26ebf3d5ae57">
                         <input type="hidden" name="from_name" value="Portfolio Contact Form">
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
                             <div class="space-y-2">
                                 <label for="name" class="text-sm font-medium text-theme-beige px-1">Your Name</label>
-                                <input type="text" id="name" name="name" required placeholder="John Doe" class="w-full px-5 py-4 rounded-xl premium-input focus:ring-0">
+                                <input type="text" id="name" name="name" required placeholder="John Doe" class="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl premium-input focus:ring-0">
                             </div>
                             <div class="space-y-2">
                                 <label for="email" class="text-sm font-medium text-theme-beige px-1">Email Address</label>
-                                <input type="email" id="email" name="email" required placeholder="john@example.com" class="w-full px-5 py-4 rounded-xl premium-input focus:ring-0">
+                                <input type="email" id="email" name="email" required placeholder="john@example.com" class="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl premium-input focus:ring-0">
                             </div>
                         </div>
-                        
+
                         <div class="space-y-2">
                             <label for="subject" class="text-sm font-medium text-theme-beige px-1">Subject</label>
-                            <input type="text" id="subject" name="subject" required placeholder="What is this regarding?" class="w-full px-5 py-4 rounded-xl premium-input focus:ring-0">
+                            <input type="text" id="subject" name="subject" required placeholder="What is this regarding?" class="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl premium-input focus:ring-0">
                         </div>
 
                         <div class="space-y-2">
                             <label for="message" class="text-sm font-medium text-theme-beige px-1">Message</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..." class="w-full px-5 py-4 rounded-xl premium-input focus:ring-0 resize-none"></textarea>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..." class="w-full px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl premium-input focus:ring-0 resize-none"></textarea>
                         </div>
 
-                        <div class="pt-4 space-y-4">
-                            <button type="submit" id="submit-btn" class="group w-full md:w-auto px-10 py-5 bg-theme-beige text-theme-black rounded-xl font-bold hover:bg-gray-200 transition-all duration-300 flex items-center justify-center gap-3 text-lg hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] disabled:opacity-60 disabled:cursor-not-allowed">
+                        <div class="pt-2 space-y-4">
+                            <button type="submit" id="submit-btn" class="group w-full md:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-theme-beige text-theme-black rounded-xl font-bold hover:bg-gray-200 transition-all duration-300 flex items-center justify-center gap-3 text-base sm:text-lg hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] disabled:opacity-60 disabled:cursor-not-allowed">
                                 <span id="btn-text">Send Message</span>
                                 <i id="btn-icon" class="ph-bold ph-paper-plane-right transform group-hover:translate-x-2 group-hover:-translate-y-1 transition-transform"></i>
                             </button>
@@ -236,7 +240,7 @@
         </div>
     </main>
 
-    <footer class="py-10 px-6 border-t border-white/10 text-sm text-theme-zinc font-normal relative z-10 bg-theme-black mt-auto">
+    <footer class="py-10 px-4 sm:px-6 border-t border-white/10 text-sm text-theme-zinc font-normal relative z-10 bg-theme-black mt-auto">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
             <p>&copy; 2026 <span class="text-theme-purple font-bold">Puneet Tyagi.</span> All rights reserved.</p>
             <p>Designed &amp; Built with <span class="text-theme-purple font-bold">Precision</span>.</p>
